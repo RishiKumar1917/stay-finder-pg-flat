@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stay Finder</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+    }
+
+    .navbar {
+      background-color: #4CAF50;
+      overflow: hidden;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      color: white;
+      font-size: 20px;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    .search-container {
+      padding: 20px;
+      text-align: center;
+      position: relative;
+    }
+
+    .search-box {
+      display: inline-flex;
+      align-items: center;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 10px;
+      background-color: white;
+    }
+
+    .search-box input {
+      border: none;
+      outline: none;
+      padding: 5px;
+      font-size: 16px;
+    }
+
+    .suggestions {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      width: 80%;
+      max-width: 600px;
+      margin: auto;
+      background-color: white;
+      border: 1px solid #ccc;
+      border-top: none;
+      position: absolute;
+      z-index: 1000;
+    }
+
+    .suggestions li {
+      padding: 10px;
+      cursor: pointer;
+      text-align: left;
+    }
+
+    .suggestions li:hover {
+      background-color: #f0f0f0;
+    }
+
+    .main-content {
+      padding: 20px;
+    }
+
+    iframe {
+      display: block;
+      margin: 0 auto;
+      max-width: 100%;
+      border: none;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #4CAF50;
+      color: white;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <div>Stay Finder</div>
+    <div>
+      <a href="#">Home</a>
+      <a href="#">Listings</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
+
+  <div class="search-container">
+    <div class="search-box">
+      <i>🔍</i>
+      <input 
+        type="text" 
+        id="searchInput" 
+        placeholder="Search for Hostel / PG / Flat" 
+        oninput="showSuggestions(this.value)" 
+        onfocus="showSuggestions(this.value)" 
+        onblur="hideSuggestions()"
+      />
+      <i style="cursor:pointer" onclick="clearSearch()">❌</i>
+    </div>
+    <ul id="suggestions-list" class="suggestions"></ul>
+  </div>
+
+  <div class="main-content">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3967.772988776708!2d77.96926408416758!3d30.412552833851446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sPG%20Hostel%20near%20UPES%20Bidholi!5e0!3m2!1sen!2sin!4v1744011982507!5m2!1sen!2sin" width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+
+  <div class="footer">
+    &copy; 2025 Stay Finder. All rights reserved. Contact us at: stayfinder@support.com
+  </div>
+
+  <script>
+    const locations = [
+      "Bidholi",
+      "Kandoli",
+      "Upper Kandoli",
+      "Lower Kandoli",
+      "Dunga",
+      "Pondha",
+      "Prem Nagar",
+      "UPES Main Campus"
+    ];
+
+    function showSuggestions(value) {
+      const list = document.getElementById("suggestions-list");
+      list.innerHTML = "";
+
+      if (value.trim() === "") return;
+
+      const filtered = locations.filter(loc => 
+        loc.toLowerCase().includes(value.toLowerCase())
+      );
+
+      filtered.forEach(loc => {
+        const li = document.createElement("li");
+        li.textContent = loc;
+        li.onclick = () => {
+          document.getElementById("searchInput").value = loc;
+          list.innerHTML = "";
+          // Optional: add logic to scroll or redirect
+        };
+        list.appendChild(li);
+      });
+    }
+
+    function hideSuggestions() {
+      setTimeout(() => {
+        document.getElementById("suggestions-list").innerHTML = "";
+      }, 200);
+    }
+
+    function clearSearch() {
+      document.getElementById("searchInput").value = "";
+      document.getElementById("suggestions-list").innerHTML = "";
+    }
+  </script>
+</body>
+</html>

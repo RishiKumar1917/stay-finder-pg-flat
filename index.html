@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Image Slider</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      background-color: #f0f0f0;
+      padding: 20px;
+    }
+    .slider-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+    .image-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .image-box img {
+      width: 300px;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+    .label {
+      margin-top: 8px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Image Slider</h1>
+
+  <div class="slider-container">
+    <div class="image-box">
+      <img id="img1" src="https://i.ibb.co/6cfg4FH/Whats-App-Image-2025-04-07-at-13-02-26-7da3e286.jpg" alt="Bathroom 1">
+      <div class="label">Bathroom 1</div>
+    </div>
+    <div class="image-box">
+      <img id="img2" src="https://i.ibb.co/HTSC1yvX/Whats-App-Image-2025-04-07-at-13-02-26-e2241df2.jpg" alt="Bathroom 2">
+      <div class="label">Bathroom 2</div>
+    </div>
+  </div>
+
+  <!-- Link to your JavaScript file -->
+  <script src="main.js"></script>
+
+</body>
+</html>
