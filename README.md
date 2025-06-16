@@ -22,7 +22,8 @@ A simple web-based platform for students to find PGs and Flats near their colleg
 3. Browse available PGs and Flats
 
 # Sample Screenshot
-*(Add screenshot here after setting up UI)*
+![image](https://github.com/user-attachments/assets/cae3298f-c9c9-4a5f-9dd8-bed5ebf189df)
+
 
 #  Folder Structure
 index.html
