@@ -24,6 +24,8 @@ A simple web-based platform for students to find PGs and Flats near their colleg
 # Sample Screenshot
 ![image](https://github.com/user-attachments/assets/cae3298f-c9c9-4a5f-9dd8-bed5ebf189df)
 
+# Best Part
+It has Emmbaded link which shows Real Time Location where you seeing the pg/flat. I'll be adding more things like gym location and medical shop in future intervention.
 
 #  Folder Structure
 index.html
@@ -35,3 +37,4 @@ images/
 
 #  👨‍💻 Author
 Rishi Kumar
+Jai Hind!!
