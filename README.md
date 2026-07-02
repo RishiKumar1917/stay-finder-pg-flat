@@ -95,5 +95,5 @@ node test/tests.js
 
 ## 👨‍💻 Author
 
-Developed by **Rishi Kumar**
+Developed by **Rishi Kumar** & 
              **Aditya Mehta**
