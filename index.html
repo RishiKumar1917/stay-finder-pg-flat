@@ -3,53 +3,133 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Image Slider</title>
-  <style>
-    body {
-      font-family: sans-serif;
-      text-align: center;
-      background-color: #f0f0f0;
-      padding: 20px;
-    }
-    .slider-container {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-    }
-    .image-box {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    .image-box img {
-      width: 300px;
-      height: auto;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    }
-    .label {
-      margin-top: 8px;
-      font-weight: bold;
-    }
-  </style>
+  <meta name="description" content="Find verified PGs, hostels, flats, gyms, and medical stores near UPES Bidholi and Kandoli campuses." />
+  <title>Stay Finder | Find PGs & Flats near UPES Bidholi & Kandoli</title>
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
 
-  <h1>Image Slider</h1>
+  <!-- Header Section -->
+  <header class="header">
+    <div class="logo">Stay<span class="highlight">Finder</span></div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="search.html">Explore</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
 
-  <div class="slider-container">
-    <div class="image-box">
-      <img id="img1" src="https://i.ibb.co/6cfg4FH/Whats-App-Image-2025-04-07-at-13-02-26-7da3e286.jpg" alt="Bathroom 1">
-      <div class="label">Bathroom 1</div>
+  <!-- Hero & Search Section -->
+  <section class="hero-section">
+    <h1>Find Your Perfect Student Stay</h1>
+    <p>Browse verified Hostels, PGs, and Flats near UPES with real-time location maps, room views, and direct student reviews.</p>
+    
+    <div class="search-container">
+      <div class="search-box">
+        <i>🔍</i>
+        <input 
+          type="text" 
+          id="searchInput" 
+          placeholder="Search for area (e.g., Bidholi, Kandoli, Pondha...)" 
+          autocomplete="off"
+        />
+        <i style="cursor:pointer" id="clearSearchBtn">❌</i>
+      </div>
+      <ul id="suggestions-list" class="suggestions"></ul>
     </div>
-    <div class="image-box">
-      <img id="img2" src="https://i.ibb.co/HTSC1yvX/Whats-App-Image-2025-04-07-at-13-02-26-e2241df2.jpg" alt="Bathroom 2">
-      <div class="label">Bathroom 2</div>
+  </section>
+
+  <!-- Main Map and Slider Content -->
+  <main class="content">
+    
+    <!-- Map Section -->
+    <section class="map-section">
+      <h2>Explore on Map</h2>
+      <div class="map-container">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3967.772988776708!2d77.96926408416758!3d30.412552833851446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sPG%20Hostel%20near%20UPES%20Bidholi!5e0!3m2!1sen!2sin!4v1744011982507!5m2!1sen!2sin" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </section>
+
+    <!-- Slider Section -->
+    <aside class="slider-section">
+      <h2>Real Room Previews</h2>
+      <div class="slider-container">
+        <div class="image-box">
+          <img id="img1" src="assets/images/Room1.jpg" alt="Bedroom Previews">
+          <div class="label">Bedroom & Study Space</div>
+        </div>
+        <div class="image-box">
+          <img id="img2" src="assets/images/Room2.png" alt="Amenities Previews">
+          <div class="label">Storage & Facilities</div>
+        </div>
+      </div>
+    </aside>
+
+  </main>
+
+  <!-- Search Category Buttons -->
+  <section class="bottom-section">
+    <h2>What would you like to search for today?</h2>
+    <div class="buttons">
+      <a href="search.html?q=Hostel">Hostel</a>
+      <a href="search.html?q=PG">PG</a>
+      <a href="search.html?q=Flats">Flats</a>
+      <a href="search.html?q=Shops">Shops</a>
+      <a href="search.html?q=Gym">Gyms</a>
+      <a href="search.html?q=Medical">Medical</a>
     </div>
-  </div>
+  </section>
 
-  <!-- Link to your JavaScript file -->
-  <script src="main.js"></script>
+  <!-- Location Highlight Cards -->
+  <section class="location-card-container">
+    <div class="location-card">
+      <h3>Bidholi</h3>
+      <p>Located near the UPES main campus. Perfect for Engineering, Computer Science, and Design students seeking short walks to classes.</p>
+    </div>
+    <div class="location-card">
+      <h3>Kandoli</h3>
+      <p>A serene, quiet residential environment near the UPES Kandoli campus, popular with Law, Business, and Liberal Studies students.</p>
+    </div>
+    <div class="location-card">
+      <h3>Pondha</h3>
+      <p>A budget-friendly area featuring local transportation, convenience stores, and affordable flats with easy access to both campuses.</p>
+    </div>
+  </section>
 
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section about">
+        <h3>About Stay Finder</h3>
+        <p>We connect students and faculty with verified student accommodation, local amenities, and essential services to make campus life seamless around Bidholi and Kandoli.</p>
+      </div>
+      <div class="footer-section links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="search.html">Explore Accommodations</a></li>
+          <li><a href="#">Health & Essentials</a></li>
+          <li><a href="#">Emergency Directory</a></li>
+        </ul>
+      </div>
+      <div class="footer-section contact">
+        <h3>Contact Support</h3>
+        <p>Email: support@stayfinder.in</p>
+        <p>Phone: +91-9876543210</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Stay Finder. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
 </body>
 </html>

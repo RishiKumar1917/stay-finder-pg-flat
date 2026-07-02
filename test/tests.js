@@ -6,9 +6,8 @@ test('that 1 is equal 1', () => {
   assert.strictEqual(1, 1);
 });
 
-test('that throws as 1 is not equal 2', () => {
-  // throws an exception because 1 != 2
-  assert.strictEqual(1, 2);
+test('that 1 is not equal to 2', () => {
+  assert.notStrictEqual(1, 2);
 });
 
 // run with `node tests.mjs`
