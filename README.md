@@ -17,6 +17,12 @@ Stay Finder is a sleek, modern, web-based platform designed specifically for stu
 
 ---
 
+## 📸 Sample Screenshot
+
+![Stay Finder Screenshot](https://github.com/user-attachments/assets/cae3298f-c9c9-4a5f-9dd8-bed5ebf189df)
+
+---
+
 ## 📂 Folder Structure
 
 ```
